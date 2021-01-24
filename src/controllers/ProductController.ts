@@ -12,18 +12,18 @@ export = {
           key: 'size',
           name: 'Tamanho',
           visible: true,
-          sizes: [
+          options: [
             {
-              id: '10x15',
+              key: '10x15',
               name: '10 x 15cm',
               position: 0,
-              image: 'reureur',
+              image: '10x15.jpg',
             },
             {
-              id: '21x15',
+              key: '21x15',
               name: '21 x 15cm',
               position: 1,
-              image: 'ahsahshas',
+              image: '21x15.jpg',
             },
           ],
         },
@@ -106,7 +106,6 @@ export = {
           ],
         },
       ],
-
     }];
 
     return res.json(products);
