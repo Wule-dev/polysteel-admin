@@ -1,12 +1,17 @@
 import { Request, Response } from 'express';
 
 export = {
+
   async index(req: Request, res: Response) {
     const products = [{
       id: 'placahomenagem',
       name: 'Placa de Homenagem',
       description: '',
       hasCustomFormat: true,
+      images: ['product1.jpg', 'product1.jpg'],
+      category: ['placahomenagem'],
+      price: 150.0,
+      measure: 'un',
       attributes: [
         {
           key: 'size',
@@ -37,6 +42,7 @@ export = {
               name: 'Aço Inox Escovado',
               position: 0,
               show: [0, 1],
+              image: 'aco-inox-escovado-placa-homenagem.png',
               price: {
                 '10x15': 45.0,
                 '21x15': 70.0,
@@ -46,6 +52,7 @@ export = {
             {
               key: 'acrilico',
               name: 'Acrílico',
+              image: 'acrilico-placa-homenagem.png',
               position: 1,
               show: [0, 1],
             },
@@ -59,6 +66,7 @@ export = {
             {
               key: 'gravacaorelevo',
               name: 'Gravação Alto Relevo',
+              image: 'alto-relevo-placa-homenagem.png',
               position: 0,
               show: [0],
               price: 0.0,

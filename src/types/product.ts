@@ -1,14 +1,27 @@
-import { CategoryType } from './category';
+export type OptionType = {
+  id: string,
+  key: string,
+  name: string,
+  position: number,
+  image: string,
+}
+
+export type AttributeType = {
+  id: string,
+  key: string,
+  name: string,
+  visible: boolean,
+  options: OptionType[]
+}
 
 export type ProductType = {
-  productID: string,
-  image: string,
+  id: string,
   name: string,
-  title: string,
   description: string,
-  category: {
-    type: CategoryType,
-    ref: any,
-  },
-  characteristics: Object,
+  hasCustomFormat: boolean,
+  images: string[],
+  category: string[],
+  price: number,
+  measure: string,
+  attributes: AttributeType[] | null
 }
